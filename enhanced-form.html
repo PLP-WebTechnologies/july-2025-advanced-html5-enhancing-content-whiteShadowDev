@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+    }
+    header, main, footer {
+      padding: 20px;
+      margin: auto;
+      max-width: 900px;
+      background: white;
+    }
+    form {
+      display: grid;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select, textarea {
+      padding: 8px;
+      width: 100%;
+      max-width: 400px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: left;
+    }
+    video {
+      width: 100%;
+      max-width: 400px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced HTML5 Form Example</h1>
+    <p>This page demonstrates semantic HTML, media content, tables, lists, and a fully-featured HTML5 form.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="media-section">
+      <h2 id="media-section">Media Example</h2>
+      <p>Below is a sample video embedded using the <code>&lt;video&gt;</code> element:</p>
+      <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+
+    <section aria-labelledby="list-section">
+      <h2 id="list-section">Fruits List</h2>
+      <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Cherry</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="table-section">
+      <h2 id="table-section">Sample Table</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Category</th>
+            <th>Price ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Laptop</td>
+            <td>Electronics</td>
+            <td>1200</td>
+          </tr>
+          <tr>
+            <td>Coffee</td>
+            <td>Beverage</td>
+            <td>3.50</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section aria-labelledby="form-section">
+      <h2 id="form-section">User Registration Form</h2>
+      <form action="/submit" method="POST" autocomplete="on">
+        <div>
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="given-name" />
+        </div>
+
+        <div>
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+        </div>
+
+        <div>
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+        </div>
+
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+        </div>
+
+        <div>
+          <label for="dob">Date of Birth *</label>
+          <input type="date" id="dob" name="dob" required />
+        </div>
+
+        <div>
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender">
+            <option value="">--Select--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonbinary">Non-binary</option>
+            <option value="prefer-not">Prefer not to say</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="bio">Short Bio</label>
+          <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+        </div>
+
+        <div>
+          <label for="country">Country</label>
+          <input type="text" id="country" name="country" value="United States" readonly />
+        </div>
+
+        <div>
+          <label>Newsletter Subscription</label><br/>
+          <input type="checkbox" id="subscribe" name="subscribe" checked />
+          <label for="subscribe">Subscribe me to the newsletter</label>
+        </div>
+
+        <div>
+          <label>Preferred Contact Method *</label><br/>
+          <input type="radio" id="contact-email" name="contact_method" value="email" required />
+          <label for="contact-email">Email</label><br/>
+          <input type="radio" id="contact-phone" name="contact_method" value="phone" />
+          <label for="contact-phone">Phone</label>
+        </div>
+
+        <div>
+          <label for="password">Password *</label>
+          <input type="password" id="password" name="password" required minlength="6" placeholder="At least 6 characters" />
+        </div>
+
+        <div>
+          <label for="website">Website</label>
+          <input type="url" id="website" name="website" placeholder="https://example.com" />
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Enhanced Form Page. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
